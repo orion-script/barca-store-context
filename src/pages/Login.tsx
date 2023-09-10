@@ -1,7 +1,13 @@
 import React from "react";
 import { useState, FormEvent, ChangeEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import FormInput from "../components/form-input/form-input.component";
 import Button from "../components/button/button.component";
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+  signInAuthUserWithEmailAndPassword,
+} from "../utils/firebase";
 
 const defaultFormFields = {
   email: "",
@@ -15,33 +21,40 @@ enum BUTTON_TYPE_CLASSES {
 }
 
 function Login() {
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
-  // const resetFormFields = () => {
-  //   setFormFields(defaultFormFields);
-  //   navigate("/");
-  // };
+  const resetFormFields = () => {
+    setFormFields(defaultFormFields);
+  };
 
-  // const signInWithGoogle = async () => {
-  //   dispatch(googleSignInStart());
-  //   navigate("/shop");
-  // };
+  const signInWithGoogle = async () => {
+    const { user } = await signInWithGooglePopup();
+    await createUserDocumentFromAuth(user);
+    navigate("/");
+  };
 
-  // const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  //   try {
-  //     dispatch(emailSignInStart(email, password));
-  //     resetFormFields();
-  //     alert("Signed in successfully");
-  //     navigate("/shop");
-  //   } catch (error) {
-  //     console.log("user sign in failed", error);
-  //   }
-  // };
+    try {
+      await signInAuthUserWithEmailAndPassword(email, password);
+      resetFormFields();
+      navigate("/");
+    } catch (error) {
+      switch (error.code) {
+        case "auth/wrong-password":
+          alert("Incorrect password for the Email");
+          break;
+        case "auth/user-not-found":
+          alert("No user associated with this Email");
+          break;
+        default:
+          alert(error);
+      }
+    }
+  };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -52,8 +65,7 @@ function Login() {
   return (
     <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
       <h1 className="text-center text-xl">Sign-In Form</h1>
-      <form>
-        {/* <form onSubmit={handleSubmit}> */}
+      <form onSubmit={handleSubmit}>
         <FormInput
           label="Email*"
           type="email"
@@ -82,7 +94,7 @@ function Login() {
         <Button
           buttonType={BUTTON_TYPE_CLASSES.google}
           type="button"
-          // onClick={signInWithGoogle}
+          onClick={signInWithGoogle}
         >
           Sign In With Google
         </Button>
