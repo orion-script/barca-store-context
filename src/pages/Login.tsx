@@ -35,7 +35,7 @@ function Login() {
     navigate("/");
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
 
     try {
@@ -90,7 +90,7 @@ function Login() {
         <h2 className="mr-2">Don't have an account?</h2>
         <a href="/signup">Sign up</a>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-start mt-10">
         <Button
           buttonType={BUTTON_TYPE_CLASSES.google}
           type="button"
