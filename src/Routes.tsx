@@ -11,8 +11,8 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/signup" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
