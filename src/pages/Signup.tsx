@@ -1,4 +1,5 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
+import AuthLayout from "../Layouts/AuthLayout";
 import { useNavigate } from "react-router-dom";
 import {
   createAuthUserWithEmailAndPassword,
@@ -69,51 +70,53 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
-      <h1 className="text-center text-xl">Sign-Up Form</h1>
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Display Name"
-          type="text"
-          required
-          onChange={handleChange}
-          name="displayName"
-          value={displayName}
-        />
+    <AuthLayout>
+      <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
+        <h1 className="text-center text-xl">Sign-Up Form</h1>
+        <form onSubmit={handleSubmit}>
+          <FormInput
+            label="Display Name"
+            type="text"
+            required
+            onChange={handleChange}
+            name="displayName"
+            value={displayName}
+          />
 
-        <FormInput
-          label="Email"
-          type="email"
-          required
-          onChange={handleChange}
-          name="email"
-          value={email}
-        />
+          <FormInput
+            label="Email"
+            type="email"
+            required
+            onChange={handleChange}
+            name="email"
+            value={email}
+          />
 
-        <FormInput
-          label="Password"
-          type="password"
-          required
-          onChange={handleChange}
-          name="password"
-          value={password}
-        />
+          <FormInput
+            label="Password"
+            type="password"
+            required
+            onChange={handleChange}
+            name="password"
+            value={password}
+          />
 
-        <FormInput
-          label="Confirm Password"
-          type="password"
-          required
-          onChange={handleChange}
-          name="confirmPassword"
-          value={confirmPassword}
-        />
-        <Button type="submit">Sign Up</Button>
-      </form>
-      <div className="flex justify-end my-5">
-        <h2 className="mr-2">Already have an account?</h2>
-        <a href="/signin">Sign In</a>
+          <FormInput
+            label="Confirm Password"
+            type="password"
+            required
+            onChange={handleChange}
+            name="confirmPassword"
+            value={confirmPassword}
+          />
+          <Button type="submit">Sign Up</Button>
+        </form>
+        <div className="flex justify-end my-5">
+          <h2 className="mr-2">Already have an account?</h2>
+          <a href="/login">Sign In</a>
+        </div>
       </div>
-    </div>
+    </AuthLayout>
   );
 };
 

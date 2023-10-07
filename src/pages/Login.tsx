@@ -1,4 +1,5 @@
 import React from "react";
+import AuthLayout from "../Layouts/AuthLayout";
 import { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import FormInput from "../components/form-input/form-input.component";
@@ -65,43 +66,45 @@ function Login() {
   };
 
   return (
-    <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
-      <h1 className="text-center text-xl">Sign-In Form</h1>
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Email*"
-          type="email"
-          required
-          onChange={handleChange}
-          name="email"
-          value={email}
-        />
+    <AuthLayout>
+      <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
+        <h1 className="text-center text-xl">Sign-In Form</h1>
+        <form onSubmit={handleSubmit}>
+          <FormInput
+            label="Email*"
+            type="email"
+            required
+            onChange={handleChange}
+            name="email"
+            value={email}
+          />
 
-        <FormInput
-          label="Password*"
-          type="password"
-          required
-          onChange={handleChange}
-          name="password"
-          value={password}
-        />
+          <FormInput
+            label="Password*"
+            type="password"
+            required
+            onChange={handleChange}
+            name="password"
+            value={password}
+          />
 
-        <Button type="submit">Sign In</Button>
-      </form>
-      <div className="flex justify-end my-5">
-        <h2 className="mr-2">Don't have an account?</h2>
-        <a href="/signup">Sign up</a>
+          <Button type="submit">Sign In</Button>
+        </form>
+        <div className="flex justify-end my-5">
+          <h2 className="mr-2">Don't have an account?</h2>
+          <a href="/signup">Sign up</a>
+        </div>
+        <div className="flex justify-start mt-10">
+          <Button
+            buttonType={BUTTON_TYPE_CLASSES.google}
+            type="button"
+            onClick={signInWithGoogle}
+          >
+            Sign In With Google
+          </Button>
+        </div>
       </div>
-      <div className="flex justify-start mt-10">
-        <Button
-          buttonType={BUTTON_TYPE_CLASSES.google}
-          type="button"
-          onClick={signInWithGoogle}
-        >
-          Sign In With Google
-        </Button>
-      </div>
-    </div>
+    </AuthLayout>
   );
 }
 
