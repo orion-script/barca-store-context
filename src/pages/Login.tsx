@@ -34,8 +34,6 @@ function Login() {
     // await createUserDocumentFromAuth(user);
     console.log("Logged in with Google");
     console.log("user", user);
-    console.log("user.uid", user.uid);
-    console.log("user.email", user.email);
     navigate("/home");
   };
 
