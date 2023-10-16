@@ -1,5 +1,8 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
 import AuthLayout from "../Layouts/AuthLayout";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { TOAST_MESSAGES } from "../utils/toastMessages";
 import { useNavigate } from "react-router-dom";
 import {
   createAuthUserWithEmailAndPassword,
@@ -35,7 +38,7 @@ const SignUp: React.FC = () => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      toast.error(TOAST_MESSAGES.PASSWORDSDONOTMATCH);
       return;
     }
 
@@ -47,18 +50,18 @@ const SignUp: React.FC = () => {
 
       if (userCredential && userCredential.user) {
         const { user } = userCredential;
+        toast.success(TOAST_MESSAGES.SIGNUPSUCCESS);
 
         // await createUserDocumentFromAuth(user, { displayName });
 
         resetFormFields();
         navigate("/login");
-        console.log("user", user);
       }
     } catch (error: any) {
       if (error.code === "auth/email-already-in-use") {
-        alert("Cannot create user, email already in use");
+        toast.error(TOAST_MESSAGES.EMAILALREADYINUSE);
       } else {
-        console.error("Error creating user:", error.message);
+        toast.error(error.message);
       }
     }
   };
@@ -71,7 +74,8 @@ const SignUp: React.FC = () => {
 
   return (
     <AuthLayout>
-      <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
+      <div className="w-full h-full pt-16 md:pt-10">
+        <ToastContainer />
         <h1 className="text-center text-xl">Sign-Up Form</h1>
         <form onSubmit={handleSubmit}>
           <FormInput

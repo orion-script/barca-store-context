@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: fira;
+  font-family: "JetBrains Mono", monospace;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,3 +17,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; */
 }
+
+/* font-family: "Fira Code", monospace;
+font-family: "JetBrains Mono", monospace; */

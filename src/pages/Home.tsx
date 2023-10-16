@@ -1,9 +1,18 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Collections from "../components/Collections";
+import Notice from "../components/Notice";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
     <div>
-      <h2>BARCELONA STORE</h2>
+      <Navbar />
+      <Hero />
+      <Collections />
+      <Notice />
+      <Footer />
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import React from "react";
 interface navlayout {
-    children:any
+  children: any;
 }
 const styles = {
-  parentContainer: "w-full h-full     ",
-  container: "2xl:container 2xl:mx-auto px-12 h-full ",
-  chiefCenter: "max-w-[1500px] w-full  px-4  mx-auto h-full  ",
+  parentContainer: "w-full h-full fixed top-0 z-50",
+  container: "2xl:container 2xl:mx-auto",
+  chiefCenter:
+    "bg-[#fff] max-w-[1500px] w-full h-12 px-4 md:px-16 border-b border-gray-500",
 };
-const NavLayout = ({ children } : navlayout) => {
+const NavLayout = ({ children }: navlayout) => {
   return (
     <div className={styles.parentContainer}>
       <div className={styles.container}>

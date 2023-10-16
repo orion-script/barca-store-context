@@ -1,12 +1,15 @@
 import React from "react";
 import AuthLayout from "../Layouts/AuthLayout";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { TOAST_MESSAGES } from "../utils/toastMessages";
 import { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import FormInput from "../components/form-input/form-input.component";
 import Button from "../components/button/button.component";
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
+  // createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../utils/firebase";
 
@@ -33,8 +36,6 @@ function Login() {
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
     // await createUserDocumentFromAuth(user);
-    console.log("Logged in with Google");
-    console.log("user", user);
     navigate("/home");
   };
 
@@ -43,18 +44,19 @@ function Login() {
 
     try {
       await signInAuthUserWithEmailAndPassword(email, password);
+      toast.success(TOAST_MESSAGES.LOGINSUCCESS);
       resetFormFields();
       navigate("/home");
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
-          alert("Incorrect password for the Email");
+          toast.error(TOAST_MESSAGES.INCORRECTPASSWORDFOREMAIL);
           break;
         case "auth/user-not-found":
-          alert("No user associated with this Email");
+          toast.error(TOAST_MESSAGES.NOUSERASSOCIATEDWITHEMAIL);
           break;
         default:
-          alert(error);
+          toast.error(error);
       }
     }
   };
@@ -67,7 +69,8 @@ function Login() {
 
   return (
     <AuthLayout>
-      <div className="w-11/12 md:w-2/4 h-screen m-auto pt-10">
+      <div className="w-full h-full pt-20 md:pt-10">
+        <ToastContainer />
         <h1 className="text-center text-xl">Sign-In Form</h1>
         <form onSubmit={handleSubmit}>
           <FormInput
@@ -87,21 +90,20 @@ function Login() {
             name="password"
             value={password}
           />
-
-          <Button type="submit">Sign In</Button>
+          <div className="flex justify-start mt-10">
+            <Button type="submit">Sign In</Button>
+            <Button
+              buttonType={BUTTON_TYPE_CLASSES.google}
+              type="button"
+              onClick={signInWithGoogle}
+            >
+              Sign In With Google
+            </Button>
+          </div>
         </form>
         <div className="flex justify-end my-5">
           <h2 className="mr-2">Don't have an account?</h2>
           <a href="/signup">Sign up</a>
-        </div>
-        <div className="flex justify-start mt-10">
-          <Button
-            buttonType={BUTTON_TYPE_CLASSES.google}
-            type="button"
-            onClick={signInWithGoogle}
-          >
-            Sign In With Google
-          </Button>
         </div>
       </div>
     </AuthLayout>

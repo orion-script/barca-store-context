@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import SignUp from "./pages/Signup";
 import Home from "./pages/Home";
+import Forwards from "./components/Forwards";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/shop/forwards" element={<Forwards />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
