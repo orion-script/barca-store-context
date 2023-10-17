@@ -24,10 +24,10 @@ const FormInput: FC<FormInputProps> = ({ label, ...otherProps }) => {
   const inputValue = otherProps.value || "";
 
   return (
-    <div className="mb-12 relative">
+    <div className="my-10 relative">
       <input
         {...otherProps}
-        className={`block w-full bg-white text-grey-darker px-4 py-3 border rounded-lg focus:outline-none ${
+        className={`block w-full bg-white px-4 py-3 border-b rounded-lg focus:outline-none ${
           isFocused || (inputValue as string).length > 0
             ? "border-grey"
             : "border-grey-light"

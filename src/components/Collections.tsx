@@ -1,7 +1,7 @@
 import React from "react";
 import ContainerLayout from "../Layouts/ContainerLayout";
 import { categories } from "../utils/categories";
-import DirectoryItem from "./DirectoryItem/DirectoryItem";
+import DirectoryItem from "./DirectoryItem";
 
 console.log(categories);
 

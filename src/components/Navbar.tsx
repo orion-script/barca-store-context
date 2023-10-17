@@ -1,32 +1,50 @@
-import React from "react";
-// import { Link } from "react";
+import React, { useState } from "react";
+import NavLayout from "../Layouts/NavLayout";
+import { Link } from "react-router-dom";
 import { FcMenu } from "react-icons/fc";
 import { BsCart } from "react-icons/bs";
-import NavLayout from "../Layouts/NavLayout";
+import { MdClose } from "react-icons/md";
 
 function Navbar() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <NavLayout>
-      <nav className="bg-[#fff] w-full h-full shadow-lg flex justify-between items-center">
-        <div className="">
-          <FcMenu className="cursor-pointer" />
-        </div>
+      <nav className="bg-[#fff] w-full h-14 flex justify-between items-center fixed top-0 px-10 z-50">
+        <Link to="/home" className="">
+          BARCA
+        </Link>
 
-        <p className="hidden md:block">BARCELONA</p>
-        <p className="md:hidden">BARCA</p>
+        <ul className="md:flex items-center hidden">
+          <li className="">
+            <a href="#">SHOP</a>
+          </li>
+          <li className="mx-10">
+            <a href="#">SIGN OUT</a>
+          </li>
+          <li className="flex items-center">
+            <BsCart />
+            <a href="#" className="ml-2">
+              CART
+            </a>
+          </li>
+        </ul>
+        <span onClick={handleToggleMenu} className="md:hidden">
+          {sidebarOpen ? <MdClose /> : <FcMenu />}
+        </span>
 
-        <div className="flex items-center">
-          <BsCart />
-          <p className="ml-3">CART</p>
-        </div>
+        {sidebarOpen && (
+          <ul className="w-11/12 h-screen bg-red-800 text-[#fff] absolute top-12 py-10">
+            <li className="my-5">SHOP</li>
+            <li className="my-5">SIGN OUT</li>
+            <li className="my-5">CART</li>
+          </ul>
+        )}
       </nav>
-
-      {/* <ul className='flex flex-col'>
-            {/* <li><a href='/'>FORWARDS</a></li>
-            <li><a href='/'>MIDFIELDERS</a></li>
-            <li><a href='/'>DEFENDERS</a></li>
-            <li><a href='/'>GOAL KEEPERS</a></li>
-        </ul> */}
     </NavLayout>
   );
 }

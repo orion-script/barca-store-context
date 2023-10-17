@@ -8,7 +8,7 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../utils/firebase";
-import FormInput from "../components/form-input/form-input.component";
+import FormInput from "../components/formInput";
 import Button from "../components/button/button.component";
 
 interface FormFields {
@@ -106,7 +106,7 @@ const SignUp: React.FC = () => {
           />
 
           <FormInput
-            label="Confirm Password"
+            label="Confirm Password*"
             type="password"
             required
             onChange={handleChange}
@@ -115,9 +115,11 @@ const SignUp: React.FC = () => {
           />
           <Button type="submit">Sign Up</Button>
         </form>
-        <div className="flex justify-end my-5">
+        <div className="flex justify-end mt-10">
           <h2 className="mr-2">Already have an account?</h2>
-          <a href="/login">Sign In</a>
+          <a href="/login" className="border-b-2 border-gray-600">
+            Sign In
+          </a>
         </div>
       </div>
     </AuthLayout>

@@ -74,22 +74,15 @@ function Login() {
         <h1 className="text-center text-xl">Sign-In Form</h1>
         <form onSubmit={handleSubmit}>
           <FormInput
-            label="Email*"
+            label="Email"
             type="email"
             required
             onChange={handleChange}
             name="email"
             value={email}
           />
-          {/* 
           <FormInput
-            label="Your Label"
-            placeholder="Placeholder Text"
-            type="password" // Optionally specify the input type
-          /> */}
-
-          <FormInput
-            label="Password*"
+            label="Password"
             type="password"
             required
             onChange={handleChange}
@@ -107,9 +100,11 @@ function Login() {
             </Button>
           </div>
         </form>
-        <div className="flex justify-end my-5">
+        <div className="flex justify-end mt-10">
           <h2 className="mr-2">Don't have an account?</h2>
-          <a href="/signup">Sign up</a>
+          <a href="/register" className="border-b-2 border-gray-600">
+            Sign up
+          </a>
         </div>
       </div>
     </AuthLayout>

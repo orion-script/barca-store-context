@@ -4,3 +4,11 @@
   padding: 2rem;
   text-align: center;
 } */
+
+.trans {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.transs {
+  transition: transform 0.3s ease-in-out;
+}
