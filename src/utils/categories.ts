@@ -16,7 +16,7 @@ export const categories: DirectoryCategory[] = [
     id: 1,
     title: "forwards",
     imageUrl: forwards,
-    route: "shop/forwards",
+    route: "/shop/forwards",
   },
   {
     id: 2,

@@ -41,6 +41,7 @@ export const Body = styled.div`
 `;
 
 export const DirectoryItemContainer = styled.div`
+  background-color: red;
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;

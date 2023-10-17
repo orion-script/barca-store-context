@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { TOAST_MESSAGES } from "../utils/toastMessages";
 import { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import FormInput from "../components/form-input/form-input.component";
+import FormInput from "../components/formInput";
 import Button from "../components/button/button.component";
 import {
   signInWithGooglePopup,
@@ -81,6 +81,12 @@ function Login() {
             name="email"
             value={email}
           />
+          {/* 
+          <FormInput
+            label="Your Label"
+            placeholder="Placeholder Text"
+            type="password" // Optionally specify the input type
+          /> */}
 
           <FormInput
             label="Password*"
