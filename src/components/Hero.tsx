@@ -7,7 +7,7 @@ function Hero() {
   return (
     <ContainerLayout>
       <div className="w-full text-center mt-20">
-        <p className="font-extrabold text-3xl">BARCELONA FC</p>
+        <p className="font-extrabold text-3xl">FC BARCELONA</p>
 
         <p className="font-medium text-xl my-8">
           Original Paintings and Fine Art Prints of FC Barcelona
