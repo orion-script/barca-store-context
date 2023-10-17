@@ -22,24 +22,24 @@ export const categories: DirectoryCategory[] = [
     id: 2,
     title: "midfielders",
     imageUrl: midfielders,
-    route: "shop/midfielders",
+    route: "/shop/midfielders",
   },
   {
     id: 3,
     title: "defenders",
     imageUrl: defenders,
-    route: "shop/defenders",
+    route: "/shop/defenders",
   },
   {
     id: 4,
     title: "keepers",
     imageUrl: keepers,
-    route: "shop/keepers",
+    route: "/shop/keepers",
   },
   {
     id: 5,
     title: "coaches",
     imageUrl: coaches,
-    route: "shop/coaches",
+    route: "/shop/coaches",
   },
 ];
