@@ -2,8 +2,6 @@ import gund1 from "../assets/gundo-1.png";
 import gund2 from "../assets/gundo-2.png";
 import dejong1 from "../assets/dejong-1.png";
 import dejong2 from "../assets/dejong-2.jpg";
-import serg1 from "../assets/roberto-1.png";
-import serg2 from "../assets/roberto-2.png";
 import oriol1 from "../assets/oriol-1.jpg";
 import oriol2 from "../assets/oriol-2.jpeg";
 import pedri1 from "../assets/pedri-1.png";

@@ -14,7 +14,7 @@ function Midfielders() {
         <div className="flex flex-wrap justify-center">
           {MidfieldersData.map((item, index) => {
             return (
-              <div className="w-11/12 md:w-1/4 p-4 relative" key={index}>
+              <div className="w-[95%] md:w-1/4 p-4 relative" key={index}>
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                   <div
                     className="bg-cover bg-no-repeat object-cover bg-center h-56 p-4"
