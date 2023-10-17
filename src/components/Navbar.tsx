@@ -38,7 +38,7 @@ function Navbar() {
         </span>
 
         {sidebarOpen && (
-          <ul className="w-11/12 h-screen bg-red-800 text-[#fff] absolute top-12 py-10">
+          <ul className="w-11/12 h-screen bg-slate-200 text-[#000] absolute top-12 py-10 left-0 pl-10">
             <li className="my-5">SHOP</li>
             <li className="my-5">SIGN OUT</li>
             <li className="my-5">CART</li>

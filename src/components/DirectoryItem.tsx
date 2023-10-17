@@ -16,7 +16,7 @@ const DirectoryItem: FC<DirectoryItemProps> = ({ category }) => {
 
   return (
     <div
-      className="flex min-w-[30%] h-[240px] flex-auto items-center justify-center border border-[#000] m-0.5 overflow-hidden hover:cursor-pointer relative"
+      className="flex w-full md:w-[30%] my-5 md:my-1 h-[240px] flex-auto items-center justify-center border border-[#000] m-1 overflow-hidden hover:cursor-pointer relative"
       onClick={onNavigateHandler}
     >
       <div
