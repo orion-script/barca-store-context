@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import AuthLayout from "../Layouts/AuthLayout";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { TOAST_MESSAGES } from "../utils/toastMessages";
-import { useState, FormEvent, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import FormInput from "../components/formInput";
 import Button from "../components/button/button.component";
 import {
   signInWithGooglePopup,
-  // createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../utils/firebase";
 
@@ -34,8 +32,7 @@ function Login() {
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    // await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
     navigate("/home");
   };
 

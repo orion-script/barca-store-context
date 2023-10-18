@@ -10,6 +10,7 @@ import {
 } from "../utils/firebase";
 import FormInput from "../components/formInput";
 import Button from "../components/button/button.component";
+import { UserCredential } from "firebase/auth"; // Import UserCredential type
 
 interface FormFields {
   displayName: string;
@@ -43,17 +44,13 @@ const SignUp: React.FC = () => {
     }
 
     try {
-      const userCredential = await createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+      const result: UserCredential | undefined =
+        await createAuthUserWithEmailAndPassword(email, password);
 
-      if (userCredential && userCredential.user) {
-        const { user } = userCredential;
+      if (result) {
+        const { user } = result;
+        await createUserDocumentFromAuth(user, { displayName });
         toast.success(TOAST_MESSAGES.SIGNUPSUCCESS);
-
-        // await createUserDocumentFromAuth(user, { displayName });
-
         resetFormFields();
         navigate("/login");
       }

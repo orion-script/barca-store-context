@@ -17,7 +17,7 @@ function Forwards() {
               <div className="w-[95%] md:w-1/4 p-4 relative" key={index}>
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                   <div
-                    className="bg-cover bg-no-repeat object-cover bg-center h-56 p-4"
+                    className="bg-cover bg-no-repeat object-cover bg-center h-56"
                     style={{ backgroundImage: `url(${item.imageUrl})` }}
                   ></div>
                   <div className="flex justify-between items-center py-5 px-2">

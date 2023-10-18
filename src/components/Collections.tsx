@@ -3,8 +3,6 @@ import ContainerLayout from "../Layouts/ContainerLayout";
 import { categories } from "../utils/categories";
 import DirectoryItem from "./DirectoryItem";
 
-console.log(categories);
-
 function Collections() {
   return (
     <ContainerLayout>
