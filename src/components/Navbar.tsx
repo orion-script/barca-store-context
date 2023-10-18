@@ -26,6 +26,9 @@ function Navbar() {
         </Link>
 
         <ul className="md:flex items-center hidden">
+          <li className="">
+            <a href="/shop">SHOP</a>
+          </li>
           {currentUser ? (
             <Link to="" onClick={signOutUser} className="mx-10">
               SIGN OUT
