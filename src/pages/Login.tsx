@@ -33,7 +33,7 @@ function Login() {
 
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
-    navigate("/home");
+    navigate("/");
   };
 
   const handleSubmit = async (event: any) => {
@@ -43,7 +43,7 @@ function Login() {
       await signInAuthUserWithEmailAndPassword(email, password);
       toast.success(TOAST_MESSAGES.LOGINSUCCESS);
       resetFormFields();
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":

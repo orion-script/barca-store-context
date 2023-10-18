@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Collections from "../components/Collections";
+import Directory from "../components/Directory";
 import Notice from "../components/Notice";
 import Footer from "../components/Footer";
 
@@ -10,7 +10,7 @@ function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Collections />
+      <Directory />
       <Notice />
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import ContainerLayout from "../Layouts/ContainerLayout";
 import { categories } from "../utils/categories";
 import DirectoryItem from "./DirectoryItem";
 
-function Collections() {
+function Directory() {
   return (
     <ContainerLayout>
       <div className="w-full flex justify-between flex-wrap">
@@ -15,4 +15,4 @@ function Collections() {
   );
 }
 
-export default Collections;
+export default Directory;
