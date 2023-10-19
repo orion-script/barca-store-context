@@ -3,6 +3,8 @@ import ProductCard from "./ProductCard";
 import PropTypes from "prop-types";
 
 const CategoryPreview = ({ title, products }) => {
+  console.log(products);
+  console.log(title);
   return (
     <div className="flex flex-col mb-[30px]">
       <h2>

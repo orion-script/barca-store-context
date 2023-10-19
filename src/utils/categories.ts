@@ -1,7 +1,7 @@
 import forwards from "../assets/forward.webp";
 import midfielders from "../assets/mid.webp";
 import defenders from "../assets/defenders.jpg";
-import keepers from "../assets/keeper.jpg";
+import goalkeepers from "../assets/keeper.jpg";
 import coaches from "../assets/coaches.webp";
 
 export type DirectoryCategory = {
@@ -32,9 +32,9 @@ export const categories: DirectoryCategory[] = [
   },
   {
     id: 4,
-    title: "keepers",
-    imageUrl: keepers,
-    route: "/shop/keepers",
+    title: "Goalkeepers",
+    imageUrl: goalkeepers,
+    route: "/shop/goalkeepers",
   },
   {
     id: 5,

@@ -1,51 +1,51 @@
-import ferran1 from "./src/assets/ferran-1.png";
-import ferran2 from "./src/assets/ferran-2.png";
-import lewy1 from "./src/assets/lewa-1.jpg";
-import lewy2 from "./src/assets/lewa-2.png";
-import raph1 from "./src/assets/raph-1.jpg";
-import raph2 from "./src/assets/raph-2.png";
-import felix1 from "./src/assets/felix-1.jpg";
-import felix2 from "./src/assets/felix-2.jpg";
-import yamal1 from "./src/assets/yamal-1.png";
-import yamal2 from "./src/assets/yamal-3.jpg";
-import ansu1 from "./src/assets/ansu-1.jpg";
-import ansu2 from "./src/assets/ansu-2.jpg";
-import gund1 from "./src/assets/gundo-1.png";
-import gund2 from "./src/assets/gundo-2.png";
-import dejong1 from "./src/assets/dejong-1.png";
-import dejong2 from "./src/assets/dejong-2.jpg";
-import roberto1 from "./src/assets/roberto-1.png";
-import roberto2 from "./src/assets/roberto-2.png";
-import oriol1 from "./src/assets/oriol-1.jpg";
-import oriol2 from "./src/assets/oriol-2.jpeg";
-import pedri1 from "./src/assets/pedri-1.png";
-import pedri2 from "./src/assets/pedri-2.jpg";
-import gavi1 from "./src/assets/gavi-1.jpg";
-import gavi2 from "./src/assets/gavi-2.jpg";
-import lopez1 from "./src/assets/lopez-1.webp";
-import lopez2 from "./src/assets/lopez-2.webp";
-import kounde1 from "./src/assets/kounde-1.png";
-import kounde2 from "./src/assets/kounde-2.jpg";
-import alonso1 from "./src/assets/alonso-1.jpg";
-import alonso2 from "./src/assets/alonso-2.png";
-import chris1 from "./src/assets/chris-1.png";
-import chris2 from "./src/assets/chris-2.png";
-import inigo1 from "./src/assets/inigo-1.jpg";
-import inigo2 from "./src/assets/inigo-2.jpg";
-import araujo1 from "./src/assets/araujo-1.jpg";
-import araujo2 from "./src/assets/araujo-2.jpeg";
-import balde1 from "./src/assets/balde-1.jpg";
-import balde2 from "./src/assets/balde-2.jpg";
-import cancelo1 from "./src/assets/cancelo-1.png";
-import cancelo2 from "./src/assets/cancelo-2.jpg";
-import stegen1 from "./src/assets/stegen-1.jpg";
-import stegen2 from "./src/assets/stegen-2.png";
-import pena1 from "./src/assets/pena-1.jpg";
-import pena2 from "./src/assets/pena-2.jpg";
-import xavi1 from "./src/assets/xavi-1.jpg";
-import xavi2 from "./src/assets/xavi-2.jpg";
-import oscar1 from "./src/assets/oscar-1.jpg";
-import oscar2 from "./src/assets/oscar-2.webp";
+import ferran1 from "../assets/ferran-1.png";
+import ferran2 from "../assets/ferran-2.png";
+import lewy1 from "../assets/lewa-1.jpg";
+import lewy2 from "../assets/lewa-2.png";
+import raph1 from "../assets/raph-1.jpg";
+import raph2 from "../assets/raph-2.png";
+import felix1 from "../assets/felix-1.jpg";
+import felix2 from "../assets/felix-2.jpg";
+import yamal1 from "../assets/yamal-1.png";
+import yamal2 from "../assets/yamal-3.jpg";
+import ansu1 from "../assets/ansu-1.jpg";
+import ansu2 from "../assets/ansu-2.jpg";
+import gund1 from "../assets/gundo-1.png";
+import gund2 from "../assets/gundo-2.png";
+import dejong1 from "../assets/dejong-1.png";
+import dejong2 from "../assets/dejong-2.jpg";
+import roberto1 from "../assets/roberto-1.png";
+import roberto2 from "../assets/roberto-2.png";
+import oriol1 from "../assets/oriol-1.jpg";
+import oriol2 from "../assets/oriol-2.jpeg";
+import pedri1 from "../assets/pedri-1.png";
+import pedri2 from "../assets/pedri-2.jpg";
+import gavi1 from "../assets/gavi-1.jpg";
+import gavi2 from "../assets/gavi-2.jpg";
+import lopez1 from "../assets/lopez-1.webp";
+import lopez2 from "../assets/lopez-2.webp";
+import kounde1 from "../assets/kounde-1.png";
+import kounde2 from "../assets/kounde-2.jpg";
+import alonso1 from "../assets/alonso-1.jpg";
+import alonso2 from "../assets/alonso-2.png";
+import chris1 from "../assets/chris-1.png";
+import chris2 from "../assets/chris-2.png";
+import inigo1 from "../assets/inigo-1.jpg";
+import inigo2 from "../assets/inigo-2.jpg";
+import araujo1 from "../assets/araujo-1.jpg";
+import araujo2 from "../assets/araujo-2.jpeg";
+import balde1 from "../assets/balde-1.jpg";
+import balde2 from "../assets/balde-2.jpg";
+import cancelo1 from "../assets/cancelo-1.png";
+import cancelo2 from "../assets/cancelo-2.jpg";
+import stegen1 from "../assets/stegen-1.jpg";
+import stegen2 from "../assets/stegen-2.png";
+import pena1 from "../assets/pena-1.jpg";
+import pena2 from "../assets/pena-2.jpg";
+import xavi1 from "../assets/xavi-1.jpg";
+import xavi2 from "../assets/xavi-2.jpg";
+import oscar1 from "../assets/oscar-1.jpg";
+import oscar2 from "../assets/oscar-2.webp";
 
 export const SHOP_DATA = [
   {
@@ -65,13 +65,13 @@ export const SHOP_DATA = [
       },
       {
         id: 3,
-        name: "Roberto Lewandowski",
+        name: "Robert Lewandowski",
         imageUrl: lewy1,
         price: 35,
       },
       {
         id: 4,
-        name: "Roberto Lewandowski",
+        name: "Robert Lewandowski",
         imageUrl: lewy2,
         price: 25,
       },

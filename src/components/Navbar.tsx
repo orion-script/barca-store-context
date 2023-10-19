@@ -3,6 +3,7 @@ import NavLayout from "../Layouts/NavLayout";
 import { Link } from "react-router-dom";
 import { FcMenu } from "react-icons/fc";
 import { BsCart } from "react-icons/bs";
+import CartIcon from "./CartIcon";
 import { MdClose } from "react-icons/md";
 import CartDropdown from "./CartDropDown";
 import { signOutUser } from "../utils/firebase";
@@ -21,7 +22,7 @@ function Navbar() {
   return (
     <NavLayout>
       <nav className="bg-[#fff] w-full h-14 flex justify-between items-center fixed top-0 px-10 z-50">
-        <Link to="/home" className="">
+        <Link to="/" className="">
           BARCA
         </Link>
 
@@ -36,10 +37,11 @@ function Navbar() {
           ) : (
             <Link to="/login">SIGN IN</Link>
           )}
-          <li className="flex items-center bg-red-00 w-10 relative cursor-pointer">
+          <CartIcon />
+          {/* <li className="flex items-center bg-red-00 w-10 relative cursor-pointer">
             <BsCart className="h-6 w-6" />
             <span className="absolute top-[-10px] right-3 text-red-900">0</span>
-          </li>
+          </li> */}
         </ul>
         <span onClick={handleToggleMenu} className="md:hidden">
           {sidebarOpen ? <MdClose /> : <FcMenu />}

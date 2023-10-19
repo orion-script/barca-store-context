@@ -1,6 +1,7 @@
-import { useContext, useState, useEffect, Fragment } from "react";
+import { useContext, useState, useEffect } from "react";
+import ContainerLayout from "../Layouts/ContainerLayout";
 import { useParams } from "react-router-dom";
-
+import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
 
 import { CategoriesContext } from "../contexts/categoriesContext";
@@ -15,8 +16,9 @@ const Category = () => {
   }, [category, categoriesMap]);
 
   return (
-    <Fragment>
-      <h2 className="text-[32px] mb-[25px] text-center">
+    <ContainerLayout>
+      <Navbar />
+      <h2 className="text-[32px] mt-20 mb-[25px] text-center">
         {category.toUpperCase()}
       </h2>
       <div className="grid grid-cols-4 gap-x-[20px] gap-y-[50px]">
@@ -25,7 +27,7 @@ const Category = () => {
             <ProductCard key={product.id} product={product} />
           ))}
       </div>
-    </Fragment>
+    </ContainerLayout>
   );
 };
 
