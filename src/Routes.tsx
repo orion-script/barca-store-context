@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Shop from "./pages/shop";
-import CheckoutPage from "./pages/checkout";
+import CheckoutPage from "./pages/Checkout";
 import Home from "./pages/Home";
 
 const AppRoutes = () => {
