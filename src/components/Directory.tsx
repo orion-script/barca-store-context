@@ -6,7 +6,7 @@ import DirectoryItem from "./DirectoryItem";
 const Directory = () => {
   return (
     <ContainerLayout>
-      <div className="w-full flex flex-wrap justify-between">
+      <div className="w-11/12 md:w-full m-auto md:m-0 flex flex-wrap justify-between">
         {categories.map((category) => (
           <DirectoryItem key={category.id} category={category} />
         ))}
