@@ -50,10 +50,14 @@ function Login() {
           toast.error(TOAST_MESSAGES.INCORRECTPASSWORDFOREMAIL);
           break;
         case "auth/user-not-found":
-          toast.error(TOAST_MESSAGES.NOUSERASSOCIATEDWITHEMAIL);
+          toast.error(TOAST_MESSAGES.USERNOTFOUND);
+          break;
+        case "auth/invalid-login-credentials":
+          toast.error(TOAST_MESSAGES.INVALIDLOGINCREDENTIALS);
           break;
         default:
-          toast.error(error);
+          toast.error(error.messasge);
+        // console.log(error);
       }
     }
   };

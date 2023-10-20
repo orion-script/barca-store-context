@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {
   getAuth,
   signInWithRedirect,
@@ -26,16 +27,20 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNW8Tp-ly-Dt0GRXADRxt600CaYVWyLoM",
-  authDomain: "barca-store-65fb1.firebaseapp.com",
-  projectId: "barca-store-65fb1",
-  storageBucket: "barca-store-65fb1.appspot.com",
-  messagingSenderId: "1017832182174",
-  appId: "1:1017832182174:web:c09e8bcd5ed68a881ac68f",
+  apiKey: "AIzaSyARc8_45AvvLbj9tlXk47yyoyOzQ3LMLFw",
+  authDomain: "barca-store-database.firebaseapp.com",
+  projectId: "barca-store-database",
+  storageBucket: "barca-store-database.appspot.com",
+  messagingSenderId: "554722582313",
+  appId: "1:554722582313:web:7ca0502e3d5b081918a138",
+  measurementId: "G-1GWRHHEFJW",
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+console.log(analytics);
 
 const googleProvider = new GoogleAuthProvider();
 

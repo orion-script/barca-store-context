@@ -5,6 +5,7 @@ export const TOAST_MESSAGES = {
   EMAILALREADYINUSE: "Email already in use.",
   LOGINSUCCESS:
     "Welcome back! You're now successfully logged in. Enjoy your experience!",
-  NOUSERASSOCIATEDWITHEMAIL: "No user associated with this email.",
   INCORRECTPASSWORDFOREMAIL: "Incorrect password for this email.",
+  USERNOTFOUND: "User not found.",
+  INVALIDLOGINCREDENTIALS: "Invalid login credentials.",
 };

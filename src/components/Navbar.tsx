@@ -35,7 +35,9 @@ function Navbar() {
               SIGN OUT
             </Link>
           ) : (
-            <Link to="/login">SIGN IN</Link>
+            <Link to="/login" className="mx-10">
+              SIGN IN
+            </Link>
           )}
           <CartIcon />
           {/* <li className="flex items-center bg-red-00 w-10 relative cursor-pointer">
