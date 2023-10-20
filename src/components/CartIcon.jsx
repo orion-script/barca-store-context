@@ -14,9 +14,8 @@ const CartIcon = () => {
       className="w-[45px] h-[45px] relative flex items-center justify-center cursor-pointer"
       onClick={toggleIsCartOpen}
     >
-      {/* <ShoppingIcon className="w-[24px] h-[24px]" /> */}
       <BsCart className="h-6 w-6" />
-      <span className="absolute text-[10px] font-bold bottom-[12px]">
+      <span className="absolute text-[10px] font-bold bottom-[15px]">
         {cartCount}
       </span>
     </div>

@@ -4,7 +4,6 @@ import { categories } from "../utils/categories";
 import DirectoryItem from "./DirectoryItem";
 
 const Directory = () => {
-  console.log(categories);
   return (
     <ContainerLayout>
       <div className="w-full flex flex-wrap justify-between">

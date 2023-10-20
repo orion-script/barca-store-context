@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
   const addProductToCart = () => addItemToCart(product);
 
   return (
-    <div className="w-full flex flex-col h-[350px] items-center relative">
+    <div className="w-full flex flex-col h-[350px] items-center relative mb-10">
       <img
         src={imageUrl}
         alt={`${name}`}

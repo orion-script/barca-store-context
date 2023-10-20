@@ -13,8 +13,8 @@ const CheckoutItem = ({ cartItem }) => {
   const removeItemHandler = () => removeItemToCart(cartItem);
 
   return (
-    <div className="w-full flex min-h-[100px] border border-gray-900 py-[15px] text-[20px] items-center">
-      <div className="w-[23%] pr-[15px]">
+    <div className="w-full flex min-h-[100px] border-b border-gray-900 py-[15px] text-[20px] items-center">
+      <div className="w-[23%]">
         <img src={imageUrl} alt={`${name}`} className="w-full h-full" />
       </div>
       <span className="w-[23%]"> {name} </span>

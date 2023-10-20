@@ -304,7 +304,7 @@ export const SHOP_DATA = [
     ],
   },
   {
-    title: "Gooolkeepers",
+    title: "Goalkeepers",
     items: [
       {
         id: 41,

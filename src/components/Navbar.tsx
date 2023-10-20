@@ -51,9 +51,20 @@ function Navbar() {
 
         {sidebarOpen && (
           <ul className="w-11/12 h-screen bg-slate-200 text-[#000] absolute top-12 py-10 left-0 pl-10">
-            <li className="my-5">SHOP</li>
-            <li className="my-5">SIGN OUT</li>
-            <li className="my-5">CART</li>
+            <li className="mb-5">
+              <a href="/shop">SHOP</a>
+            </li>
+            {currentUser ? (
+              <Link to="" onClick={signOutUser} className="">
+                SIGN OUT
+              </Link>
+            ) : (
+              <Link to="/login">SIGN IN</Link>
+            )}
+            <li className="my-5 flex items-center">
+              <CartIcon />
+              CART
+            </li>
           </ul>
         )}
       </nav>
