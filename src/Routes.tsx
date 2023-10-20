@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Shop from "./pages/shop";
-import Checkout from "./pages/checkout";
+import CheckoutPage from "./pages/checkout";
 import Home from "./pages/Home";
 
 const AppRoutes = () => {
@@ -15,7 +15,7 @@ const AppRoutes = () => {
         <Route index element={<Home />} />
         <Route path="shop/*" element={<Shop />} />
         <Route path="/register" element={<SignUp />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </BrowserRouter>
   );
