@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import React, { Routes, Route } from "react-router-dom";
 import CategoriesPreview from "../pages/categoryPreview";
 import Category from "../pages/category";
 

@@ -1,7 +1,6 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import PropTypes from "prop-types";
 import ContainerLayout from "../Layouts/ContainerLayout";
 import Navbar from "./Navbar";
 
@@ -28,11 +27,6 @@ const CategoryPreview = ({ title, products }) => {
       </ContainerLayout>
     </Fragment>
   );
-};
-
-CategoryPreview.propTypes = {
-  title: PropTypes.string.isRequired, // Add this line
-  products: PropTypes.array.isRequired, // Modify the shape as needed
 };
 
 export default CategoryPreview;

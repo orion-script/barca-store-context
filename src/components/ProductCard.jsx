@@ -2,9 +2,7 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import { CartContext } from "../contexts/cartContext";
 
-import Button, {
-  BUTTON_TYPE_CLASSES,
-} from "../components/button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "./button/button.component";
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
