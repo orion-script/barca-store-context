@@ -27,13 +27,13 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyARc8_45AvvLbj9tlXk47yyoyOzQ3LMLFw",
-  authDomain: "barca-store-database.firebaseapp.com",
-  projectId: "barca-store-database",
-  storageBucket: "barca-store-database.appspot.com",
-  messagingSenderId: "554722582313",
-  appId: "1:554722582313:web:7ca0502e3d5b081918a138",
-  measurementId: "G-1GWRHHEFJW",
+  apiKey: "AIzaSyDu00l11z0gjP4zkvc9Wdb_udzC1Ig_LzI",
+  authDomain: "barca-store-db.firebaseapp.com",
+  projectId: "barca-store-db",
+  storageBucket: "barca-store-db.appspot.com",
+  messagingSenderId: "286255667783",
+  appId: "1:286255667783:web:90a16270da6896fc10af62",
+  measurementId: "G-JQ6CEXKMVH",
 };
 
 // Initialize Firebase
