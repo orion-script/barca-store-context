@@ -20,19 +20,24 @@ const Checkout = () => {
         <div className="w-11/12 md:w-[55%] min-h-[90vh] flex flex-col items-center m-auto text-center">
           <div className="w-full py-[10px] px-0 flex justify-between border-b border-gray-900">
             <div className="capitalize w-[23%]">
-              <span className="w-[8%]">Product</span>
+              <span className="w-[8%] hidden md:block">Product</span>
+              <span className="md:hidden">Prd.</span>
+            </div>
+            <div className="capitalize w-[23%] ">
+              <span className="w-[8%] hidden md:block">Description</span>
+              <span className="md:hidden">Des.</span>
             </div>
             <div className="capitalize w-[23%]">
-              <span className="w-[8%]">Description</span>
+              <span className="w-[8%] hidden md:block">Quantity</span>
+              <span className="md:hidden">Qnt.</span>
             </div>
             <div className="capitalize w-[23%]">
-              <span className="w-[8%]">Quantity</span>
+              <span className="w-[8%] hidden md:block">Price</span>
+              <span className="md:hidden">Prc.</span>
             </div>
             <div className="capitalize w-[23%]">
-              <span className="w-[8%]">Price</span>
-            </div>
-            <div className="capitalize w-[23%]">
-              <span className="w-[8%]">Remove</span>
+              <span className="w-[8%] hidden md:block">Remove</span>
+              <span className="md:hidden">Rem.</span>
             </div>
           </div>
           {cartItems.map((cartItem) => (

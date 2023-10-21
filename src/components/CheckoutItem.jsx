@@ -13,12 +13,12 @@ const CheckoutItem = ({ cartItem }) => {
   const removeItemHandler = () => removeItemToCart(cartItem);
 
   return (
-    <div className="w-full flex min-h-[100px] border-b border-gray-900 py-[15px] text-[20px] items-center">
-      <div className="w-[23%]">
+    <div className="w-full flex h-[100px] md:h-[120px] border-b border-gray-900 py-[15px] text-[10px] md:text-[20px] items-center text-start">
+      <div className="w-[23%] md:w-[15%] h-full">
         <img src={imageUrl} alt={`${name}`} className="w-full h-full" />
       </div>
-      <span className="w-[23%]"> {name} </span>
-      <span className="flex w-[23%]">
+      <span className="w-[20%] md:w-[23%] ml-5">{name}</span>
+      <span className="flex w-[23%] md:w-[20%]">
         <div className="cursor-pointer" onClick={removeItemHandler}>
           &#10094;
         </div>
@@ -27,8 +27,8 @@ const CheckoutItem = ({ cartItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="w-[23%]"> {price}</span>
-      <div className="pl-3 cursor-pointer" onClick={clearItemHandler}>
+      <span className="w-[15%]">{price}</span>
+      <div className="md:pl-10 cursor-pointer" onClick={clearItemHandler}>
         &#10005;
       </div>
     </div>

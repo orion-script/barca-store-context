@@ -40,10 +40,6 @@ function Navbar() {
             </Link>
           )}
           <CartIcon />
-          {/* <li className="flex items-center bg-red-00 w-10 relative cursor-pointer">
-            <BsCart className="h-6 w-6" />
-            <span className="absolute top-[-10px] right-3 text-red-900">0</span>
-          </li> */}
         </ul>
         <span onClick={handleToggleMenu} className="md:hidden">
           {sidebarOpen ? <MdClose /> : <FcMenu />}
@@ -52,7 +48,7 @@ function Navbar() {
         {isCartOpen && <CartDropdown />}
 
         {sidebarOpen && (
-          <ul className="w-11/12 h-screen bg-slate-200 text-[#000] absolute top-12 py-10 left-0 pl-10">
+          <ul className="w-2/5 h-auto bg-slate-200 text-[#000] absolute top-16 right-0 pl-3 rounded-lg py-10 side-bar">
             <li className="mb-5">
               <a href="/shop">SHOP</a>
             </li>
@@ -65,7 +61,7 @@ function Navbar() {
             )}
             <li className="my-5 flex items-center">
               <CartIcon />
-              CART
+              <p>CART</p>
             </li>
           </ul>
         )}

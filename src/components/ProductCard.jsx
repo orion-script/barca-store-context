@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
         onClick={addProductToCart}
         className="absolute w-[80%] opacity-70 top-[255px] hidden hover:opacity-90 hover:flex"
       >
-        Add to card
+        Add to cart
       </Button>
     </div>
   );

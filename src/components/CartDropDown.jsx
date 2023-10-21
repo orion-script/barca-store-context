@@ -8,7 +8,6 @@ import CartItem from "./CartItem";
 const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
   const { setIsCartOpen } = useContext(CartContext);
-  // const { isCartOpen } = useContext(CartContext);
   const navigate = useNavigate();
 
   const goToCheckoutHandler = () => {
@@ -17,7 +16,7 @@ const CartDropdown = () => {
   };
 
   return (
-    <div className="absolute w-[240px] h-[340px] flex flex-col p-[20px] border border-[#000] bg-[#fff] top-[90px] right-[40px] z-10">
+    <div className="absolute w-[240px] h-[340px] flex flex-col p-[20px] border border-[#000] bg-[#fff] top-[90px] right-[9rem] md:right-[40px] z-10">
       <div className="h-[240px] flex flex-col overflow-scroll">
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)

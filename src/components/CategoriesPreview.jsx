@@ -6,12 +6,13 @@ import ContainerLayout from "../Layouts/ContainerLayout";
 import Navbar from "./Navbar";
 
 const CategoryPreview = ({ title, products }) => {
+  const linkClassName = title === "coaches" ? "pt-20" : "pt-5";
   return (
     <Fragment>
       <Navbar />
       <ContainerLayout>
-        <div className="w-11/12 md:w-full m-auto md:m-0 flex flex-col mb-[30px] mt-20">
-          <h2>
+        <div className="w-11/12 md:w-full h-auto m-auto md:m-0 flex flex-col mb-[30px]">
+          <h2 className={linkClassName}>
             <Link className="text-[28px] mb-[25px] cursor-pointer" to={title}>
               {title.toUpperCase()}
             </Link>
