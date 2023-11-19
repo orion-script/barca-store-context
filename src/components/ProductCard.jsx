@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { CartContext } from "../contexts/cartContext";
-import { SHOP_DATA } from "../utils/db";
 import Button, { BUTTON_TYPE_CLASSES } from "./button/button.component";
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
   const { addItemToCart } = useContext(CartContext);
-  console.log(SHOP_DATA);
   const addProductToCart = () => addItemToCart(product);
 
   return (

@@ -16,14 +16,12 @@ const CartDropdown = () => {
   };
 
   return (
-    <div className="absolute w-[240px] h-[340px] flex flex-col p-[20px] border border-[#000] bg-[#fff] top-[90px] right-[9rem] md:right-[40px] z-10">
-      <div className="h-[240px] flex flex-col overflow-scroll">
+    <div className="fixed w-[90%] md:w-[250px] h-[250px] md:h-[340px] flex flex-col p-[10px] md:p-[20px] border border-[#000] bg-[#fff] top-[55px] right-[5%] md:right-12 z-50 rounded-lg animate-dropdown">
+      <div className="flex flex-col h-60 overflow-y-scroll">
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
         ) : (
-          <span className="text-[18px] my-[50px] mx-auto">
-            Your cart is empty
-          </span>
+          <span className="text-lg  my-[50px] mx-auto">Your cart is empty</span>
         )}
       </div>
       <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
