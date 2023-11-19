@@ -6,7 +6,10 @@ import Button, { BUTTON_TYPE_CLASSES } from "./button/button.component";
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
   const { addItemToCart } = useContext(CartContext);
+  const { removeItemFromCart } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
   const addProductToCart = () => addItemToCart(product);
+  const removeProductToCart = () => removeItemFromCart(product);
 
   return (
     <div className="w-full flex flex-col h-[350px] items-center relative mb-10">
@@ -21,10 +24,16 @@ const ProductCard = ({ product }) => {
       </div>
       <Button
         buttonType={BUTTON_TYPE_CLASSES.inverted}
-        onClick={addProductToCart}
+        onClick={
+          cartItems && cartItems.find((item) => item.id === product.id)
+            ? removeProductToCart
+            : addProductToCart
+        }
         className="absolute w-[80%] opacity-70 top-[255px] hidden hover:opacity-90 hover:flex"
       >
-        Add to cart
+        {cartItems && cartItems.find((item) => item.id === product.id)
+          ? "Remove from cart"
+          : "Add to cart"}
       </Button>
     </div>
   );

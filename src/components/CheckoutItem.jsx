@@ -5,12 +5,12 @@ import { CartContext } from "../contexts/cartContext";
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
 
-  const { clearItemFromCart, addItemToCart, removeItemToCart } =
+  const { clearItemFromCart, addItemToCart, removeItemFromCart } =
     useContext(CartContext);
 
   const clearItemHandler = () => clearItemFromCart(cartItem);
   const addItemHandler = () => addItemToCart(cartItem);
-  const removeItemHandler = () => removeItemToCart(cartItem);
+  const removeItemHandler = () => removeItemFromCart(cartItem);
 
   return (
     <div className="w-full flex h-[100px] md:h-[120px] border-b border-gray-900 py-[15px] text-[10px] md:text-[20px] items-center text-start">
