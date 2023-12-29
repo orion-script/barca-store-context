@@ -15,8 +15,6 @@ const Category = () => {
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
 
-  console.log("Products", products);
-
   return (
     <Fragment>
       <Navbar />
@@ -24,7 +22,7 @@ const Category = () => {
         <h2 className="text-[32px] mt-20 mb-[25px] text-center">
           {category.toUpperCase()}
         </h2>
-        <div className="    ">
+        <div className="w-11/12 m-auto md:m-0 md:w-full grid grid-cols-1 md:grid-cols-4 gap-x-[20px] gap-y-[50px]">
           {products &&
             products.map((product) => (
               <ProductCard key={product.id} product={product} />

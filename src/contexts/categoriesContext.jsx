@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   getCategoriesAndDocuments,
-  // addCollectionAndDocuments,
+  addCollectionAndDocuments,
 } from "../utils/firebase";
 import { SHOP_DATA } from "../utils/db";
 
@@ -14,7 +14,7 @@ export const CategoriesProvider = ({ children }) => {
   const [categoriesMap, setCategoriesMap] = useState({});
 
   useEffect(() => {
-    // addCollectionAndDocuments("categories", SHOP_DATA);
+    addCollectionAndDocuments("categories", SHOP_DATA);
     const getCategoriesMap = async () => {
       const categoryMap = await getCategoriesAndDocuments("categories");
       setCategoriesMap(categoryMap);
@@ -22,8 +22,6 @@ export const CategoriesProvider = ({ children }) => {
 
     getCategoriesMap();
   }, []);
-
-  console.log(categoriesMap);
 
   const value = { categoriesMap };
   return (

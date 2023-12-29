@@ -13,13 +13,13 @@ const ProductCard = ({ product }) => {
   const removeProductToCart = () => removeItemFromCart(product);
 
   return (
-    <div className="w-full flex flex-col h-[350px] items-center relative mb-10">
+    <div className="w-11/12 m-auto md:m-0 md:w-full flex flex-col h-[350px] items-center relative mb-10 border border-[#000] pb-5">
       <img
         src={imageUrl}
         alt={`${name}`}
-        className="w-full h-[95%] object-cover mb-[5px] hover:opacity-80"
+        className="w-full h-[95%] inset-0 object-cover mb-[5px] hover:opacity-80"
       />
-      <div className="w-full h-[5%] flex justify-between text-[18px]">
+      <div className="w-full h-[5%] flex justify-between text-[18px] px-3">
         <span className="w-[90%] mb-[15px]">{name}</span>
         <span className="w-[10%]">{price}</span>
       </div>
