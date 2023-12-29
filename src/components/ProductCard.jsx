@@ -4,6 +4,7 @@ import { CartContext } from "../contexts/cartContext";
 import Button, { BUTTON_TYPE_CLASSES } from "./button/button.component";
 
 const ProductCard = ({ product }) => {
+  console.log("PRODUCTS", product)
   const { name, price, imageUrl } = product;
   const { addItemToCart } = useContext(CartContext);
   const { removeItemFromCart } = useContext(CartContext);
