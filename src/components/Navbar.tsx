@@ -12,7 +12,7 @@ function Navbar() {
   const { isCartOpen } = useContext(CartContext);
 
   return (
-    <NavLayout>
+    <>
       <nav className="bg-[#fff] w-full h-14 flex justify-between items-center fixed top-0 px-5 md:px-10 z-50">
         <Link to="/" className="">
           BARCA
@@ -36,7 +36,7 @@ function Navbar() {
 
         {isCartOpen && <CartDropdown />}
       </nav>
-    </NavLayout>
+    </>
   );
 }
 

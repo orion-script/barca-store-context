@@ -7,11 +7,15 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Hero />
-      <Directory />
-      <Notice />
+
+      <main className="flex-grow">
+        <Hero />
+        <Directory />
+        <Notice />
+      </main>
+
       <Footer />
     </div>
   );
