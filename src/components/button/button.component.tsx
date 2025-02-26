@@ -5,12 +5,14 @@ import {
   GoogleSignInButton,
   InvertedButton,
   ButtonSpinner,
+  RedButton,
 } from "./button.styles";
 
 export enum BUTTON_TYPE_CLASSES {
   base = "base",
   google = "google-sign-in",
   inverted = "inverted",
+  red = "red",
 }
 
 const getButton = (
@@ -21,6 +23,8 @@ const getButton = (
       return GoogleSignInButton;
     case BUTTON_TYPE_CLASSES.inverted:
       return InvertedButton;
+    case BUTTON_TYPE_CLASSES.red:
+      return RedButton;
     default:
       return BaseButton;
   }

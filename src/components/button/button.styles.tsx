@@ -52,6 +52,18 @@ export const InvertedButton = styled(BaseButton)`
   }
 `;
 
+export const RedButton = styled(BaseButton)`
+  background-color: red;
+  color: black;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+`;
+
 export const ButtonSpinner = styled(SpinnerContainer)`
   width: 30px;
   height: 30px;

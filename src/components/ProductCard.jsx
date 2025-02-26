@@ -4,7 +4,7 @@ import { CartContext } from "../contexts/cartContext";
 import Button, { BUTTON_TYPE_CLASSES } from "./button/button.component";
 
 const ProductCard = ({ product }) => {
-  console.log("PRODUCTS", product)
+  console.log("PRODUCTS", product);
   const { name, price, imageUrl } = product;
   const { addItemToCart } = useContext(CartContext);
   const { removeItemFromCart } = useContext(CartContext);
@@ -24,7 +24,12 @@ const ProductCard = ({ product }) => {
         <span className="w-[10%]">{price}</span>
       </div>
       <Button
-        buttonType={BUTTON_TYPE_CLASSES.inverted}
+        // buttonType={BUTTON_TYPE_CLASSES.inverted}
+        buttonType={
+          cartItems && cartItems.find((item) => item.id === product.id)
+            ? BUTTON_TYPE_CLASSES.red
+            : BUTTON_TYPE_CLASSES.inverted
+        }
         onClick={
           cartItems && cartItems.find((item) => item.id === product.id)
             ? removeProductToCart
